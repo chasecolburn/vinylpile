@@ -8,8 +8,7 @@
     <fragment
         android:id="@+id/navigation_records"
         android:name="com.mindtwisted.vinylpile.ui.record.RecordFragment"
-        android:label="@string/title_records"
-        tools:layout="@layout/fragment_records" />
+        android:label="@string/title_records" />
 
     <fragment
         android:id="@+id/navigation_collections"

@@ -1,17 +1,13 @@
 package com.mindtwisted.vinylpile
 
 import android.os.Bundle
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.mindtwisted.vinylpile.databinding.ActivityMainBinding
-import com.mindtwisted.vinylpile.helper.QueryHelper
-import com.mindtwisted.vinylpile.model.Record
-import com.mindtwisted.vinylpile.ui.record.RecordViewModel
 import java.io.BufferedReader
 import java.io.DataOutputStream
 import java.io.InputStreamReader
@@ -28,6 +24,9 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setSupportActionBar(binding.toolbarActionbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val navView: BottomNavigationView = binding.navView
 

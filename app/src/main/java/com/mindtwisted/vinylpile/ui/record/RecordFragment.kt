@@ -2,6 +2,8 @@ package com.mindtwisted.vinylpile.ui.record
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.compose.foundation.Image
@@ -38,24 +40,22 @@ import com.mindtwisted.vinylpile.model.Record
 import com.mindtwisted.vinylpile.task.RecordListDataLoader
 
 class RecordFragment : Fragment(), LoaderManager.LoaderCallbacks<List<Record>> {
-//
-//    private var _binding: FragmentDashboardBinding? = null
-//
-//    // This property is only valid between onCreateView and
-//    // onDestroyView.
-//    private val binding get() = _binding!!
+
+    companion object {
+        const val LOADER_RECORDS: Int = 1
+    }
 
     //*********************************************************
     // Fragment methods
     //*********************************************************
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        LoaderManager.getInstance(requireActivity()).initLoader(LOADER_RECORDS, null, this)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        LoaderManager.getInstance(requireActivity()).initLoader(1, null, this)
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
     }
 
     override fun onCreateView(
@@ -69,11 +69,6 @@ class RecordFragment : Fragment(), LoaderManager.LoaderCallbacks<List<Record>> {
                 RecordListView(getViewModel())
             }
         }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-//        _binding = null
     }
 
     //*********************************************************
@@ -162,5 +157,4 @@ class RecordFragment : Fragment(), LoaderManager.LoaderCallbacks<List<Record>> {
             }
         }
     }
-
 }

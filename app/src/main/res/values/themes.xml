@@ -1,6 +1,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.VinylPile.Base" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
     <!-- Base application theme. -->
-    <style name="Theme.VinylPile" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.VinylPile" parent="Theme.VinylPile.Base">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
