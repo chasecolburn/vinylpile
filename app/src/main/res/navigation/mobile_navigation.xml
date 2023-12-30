@@ -3,23 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_records">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.mindtwisted.vinylpile.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_records"
+        android:name="com.mindtwisted.vinylpile.ui.record.RecordFragment"
+        android:label="@string/title_records"
+        tools:layout="@layout/fragment_records" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.mindtwisted.vinylpile.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_collections"
+        android:name="com.mindtwisted.vinylpile.ui.collection.CollectionFragment"
+        android:label="@string/title_collections"
+        tools:layout="@layout/fragment_collections" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.mindtwisted.vinylpile.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_other"
+        android:name="com.mindtwisted.vinylpile.ui.other.OtherFragment"
+        android:label="@string/title_other"
+        tools:layout="@layout/fragment_other" />
 </navigation>

@@ -1,4 +1,4 @@
-package com.mindtwisted.vinylpile.ui.notifications
+package com.mindtwisted.vinylpile.ui.other
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.mindtwisted.vinylpile.databinding.FragmentNotificationsBinding
+import com.mindtwisted.vinylpile.databinding.FragmentOtherBinding
 
-class NotificationsFragment : Fragment() {
+class OtherFragment : Fragment() {
 
-    private var _binding: FragmentNotificationsBinding? = null
+    private var _binding: FragmentOtherBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -22,14 +22,14 @@ class NotificationsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val notificationsViewModel =
-            ViewModelProvider(this).get(NotificationsViewModel::class.java)
+        val otherViewModel =
+            ViewModelProvider(this).get(OtherViewModel::class.java)
 
-        _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
+        _binding = FragmentOtherBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textNotifications
-        notificationsViewModel.text.observe(viewLifecycleOwner) {
+        otherViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root

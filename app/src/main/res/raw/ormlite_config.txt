@@ -1,0 +1,128 @@
+#
+# generated manually
+#
+# --table-start--
+dataClass=com.mindtwisted.vinylpile.model.Collection
+tableName=collections
+# --table-fields-start--
+# --field-start--
+fieldName=id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=name
+# --field-end--
+# --field-start--
+fieldName=notes
+# --field-end--
+# --field-start--
+fieldName=createdAt
+columnName=created_at
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.mindtwisted.vinylpile.model.Record
+tableName=records
+# --table-fields-start--
+# --field-start--
+fieldName=id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=label
+# --field-end--
+# --field-start--
+fieldName=genre
+# --field-end--
+# --field-start--
+fieldName=style
+# --field-end--
+# --field-start--
+fieldName=year
+# --field-end--
+# --field-start--
+fieldName=country
+# --field-end--
+# --field-start--
+fieldName=name
+# --field-end--
+# --field-start--
+fieldName=artwork
+# --field-end--
+# --field-start--
+fieldName=artist
+# --field-end--
+# --field-start--
+fieldName=album
+# --field-end--
+# --field-start--
+fieldName=owner
+# --field-end--
+# --field-start--
+fieldName=createdAt
+columnName=created_at
+# --field-end--
+# --field-start--
+fieldName=viewedAt
+columnName=viewed_at
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.mindtwisted.vinylpile.model.CollectionRecord
+tableName=collection_records
+# --table-fields-start--
+# --field-start--
+fieldName=collectionId
+columnName=collection_id
+indexName=collection_records_collection_id_idx
+# --field-end--
+# --field-start--
+fieldName=recordId
+columnName=record_id
+indexName=collection_records_record_id_idx
+# --field-end--
+# --field-start--
+fieldName=sequence
+indexName=collection_records_sequence_idx
+# --field-end--
+# --field-start--
+fieldName=createdAt
+columnName=created_at
+indexName=collection_records_created_at_idx
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.mindtwisted.vinylpile.model.Track
+tableName=tracks
+# --table-fields-start--
+# --field-start--
+fieldName=id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=side
+# --field-end--
+# --field-start--
+fieldName=name
+# --field-end--
+# --field-start--
+fieldName=rpm
+# --field-end--
+# --field-start--
+fieldName=time
+# --field-end--
+# --field-start--
+fieldName=rating
+# --field-end--
+# --field-start--
+fieldName=notes
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
